@@ -1,7 +1,7 @@
-# Tinker board develop guild
+# Tinker board develop manual
 
 ## 1 Description
-This manual is guild to develop for tinker board. Desktop is Debian9 Gnome.
+This manual is for the development of tinker board. OS is Debian9 Gnome.
 ## 2 Create workspace dircectory
 ```
 $mkdir Workspace
@@ -16,6 +16,7 @@ $sudo apt install libssl-dev
 ## 4 Build kernel
 ### 4.1 Install complier
 ```
+$cd Workspace
 $tar -xvf tools/arm-eabi-4.8.tar.gz
 $sudo mv arm-eabi-4.8 /opt
 ```
@@ -26,6 +27,7 @@ export PATH=$PATH:/opt/arm-eabi-4.8/bin
 
 ### 4.2 Get source code
 ```
+$cd Workspace
 $git clone https://github.com/TinkerBoard/debian_kernel.git
 ```
 ### 4.3 Build
@@ -46,6 +48,7 @@ $sudo apt install device-tree-compiler
 ```
 ### 5.2 Get source code
 ```
+$cd Workspace
 $git clone https://github.com/TinkerBoard/debian_u-boot.git
 ```
 ### 5.3 Build
