@@ -35,6 +35,9 @@ $export CROSS_COMPILE=arm-eabi-
 $cd debian_kernel
 $make miniarm-rk3288_defconfig
 $make rk3288-miniarm.img -j4
+$make modules
+$mkdir modules_install
+$make INSTALL_MOD_PATH=./modules_install modules_install
 ```
 ## 5 Build u-boot
 ### 5.1 Install dependence
