@@ -16,13 +16,7 @@ $sudo apt install libssl-dev
 ## 4 Build kernel
 ### 4.1 Install complier
 ```
-$cd Workspace
-$tar -xvf tools/arm-eabi-4.8.tar.gz
-$sudo mv arm-eabi-4.8 /opt
-```
-Then append the path to $PAHT variable, edit ~/.bashrc, and append follow string:
-```
-export PATH=$PATH:/opt/arm-eabi-4.8/bin
+$sudo apt install gcc-arm-linux-gnueabihf
 ```
 
 ### 4.2 Get source code
@@ -33,7 +27,7 @@ $git clone https://github.com/TinkerBoard/debian_kernel.git
 ### 4.3 Build
 ```
 $export ARCH=arm
-$export CROSS_COMPILE=arm-eabi-
+$export CROSS_COMPILE=arm-linux-gnueabihf-
 $cd debian_kernel
 $make miniarm-rk3288_defconfig
 $make rk3288-miniarm.img -j4
